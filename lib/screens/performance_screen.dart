@@ -184,7 +184,7 @@ class PerformanceScreenState extends State<PerformanceScreen>
                     children: [
                       buildTableCell('1'),
                       buildTableCell('2023-08-12'),
-                      buildTableCell('1st'),
+                      buildTableCell('Team A VS Team C '),
                       buildTableCell('100'),
                       buildTableCell('1'),
                       buildTableCell('10.2'),
@@ -194,7 +194,7 @@ class PerformanceScreenState extends State<PerformanceScreen>
                     children: [
                       buildTableCell('1'),
                       buildTableCell('2023-08-12'),
-                      buildTableCell('1st'),
+                      buildTableCell('Team A VS Team C '),
                       buildTableCell('100'),
                       buildTableCell('1'),
                       buildTableCell('10.2'),
@@ -204,7 +204,7 @@ class PerformanceScreenState extends State<PerformanceScreen>
                     children: [
                       buildTableCell('1'),
                       buildTableCell('2023-08-12'),
-                      buildTableCell('1st'),
+                      buildTableCell('Team A VS Team C '),
                       buildTableCell('100'),
                       buildTableCell('1'),
                       buildTableCell('10.2'),
@@ -214,7 +214,7 @@ class PerformanceScreenState extends State<PerformanceScreen>
                     children: [
                       buildTableCell('1'),
                       buildTableCell('2023-08-12'),
-                      buildTableCell('1st'),
+                      buildTableCell('Team A VS Team C '),
                       buildTableCell('100'),
                       buildTableCell('1'),
                       buildTableCell('10.2'),
