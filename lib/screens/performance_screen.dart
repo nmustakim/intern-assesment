@@ -116,7 +116,16 @@ class PerformanceScreenState extends State<PerformanceScreen>
                       buildTableCell('10.2'),
                     ],
                   ),
-                  // Add more rows as needed
+                  TableRow(
+                    children: [
+                      buildTableCell('1'),
+                      buildTableCell('2023-08-12'),
+                      buildTableCell('1st'),
+                      buildTableCell('100'),
+                      buildTableCell('1'),
+                      buildTableCell('10.2'),
+                    ],
+                  ),
                 ],
               ),
             ),
