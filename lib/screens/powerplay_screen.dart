@@ -139,12 +139,14 @@ class PowerPlaySectionState extends State<PowerPlaySection> {
 
           return GestureDetector(
             onTap: () {
-              if (isSelected) {
+              if(isSelected){
                 unselectNumber(number);
-              } else if (selectedNumbers.isEmpty ||
+              }
+              else if (selectedNumbers.isEmpty ||
                   number - 1 == selectedNumbers.last) {
                 selectNumber(number);
               }
+
             },
             child: Container(
               margin: const EdgeInsets.all(5),
