@@ -18,18 +18,22 @@ class _PowerPlayScreenState extends State<PowerPlayScreen> {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
-            child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>PerformanceScreen()));
-                },
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFFEDA14)),
-                child: Text(
-                  'Done',
-                  style: GoogleFonts.poppins(color: Colors.black),
-                )),
+            child: Container(
+              margin: const EdgeInsets.symmetric(horizontal: 16),
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const PerformanceScreen()));
+                  },
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFFEDA14)),
+                  child: Text(
+                    'Done',
+                    style: GoogleFonts.poppins(color: Colors.black),
+                  )),
+            ),
           ),
         ],
       ),
@@ -40,49 +44,49 @@ class _PowerPlayScreenState extends State<PowerPlayScreen> {
         ),
         toolbarHeight: 64,
         leading: Container(
-          margin: EdgeInsets.all(16),
+          margin: const EdgeInsets.all(16),
           height: 32,
           width: 32,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(6), color: Color(0xFF16171D)),
-          child: Icon(Icons.navigate_before),
+              borderRadius: BorderRadius.circular(6), color: const Color(0xFF16171D)),
+          child: const Icon(Icons.navigate_before),
         ),
         foregroundColor: Colors.white,
-        backgroundColor: Color(0xFF1F212A),
+        backgroundColor: const Color(0xFF1F212A),
       ),
-      backgroundColor: Color(0xFF16171D),
+      backgroundColor: const Color(0xFF16171D),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Text(
                 'Power Play 1',
                 style: GoogleFonts.poppins(fontSize: 15, color: Colors.white),
               ),
-              Center(child: PowerPlaySection()),
-              SizedBox(
-                height: 25,
+              const Center(child: PowerPlaySection()),
+              const SizedBox(
+                height: 20,
               ),
               Text(
                 'Power Play 2',
                 style: GoogleFonts.poppins(fontSize: 15, color: Colors.white),
               ),
-              Center(child: PowerPlaySection()),
-              SizedBox(
-                height: 25,
+              const Center(child: PowerPlaySection()),
+              const SizedBox(
+                height: 20,
               ),
               Text(
                 'Power Play 3',
                 style: GoogleFonts.poppins(fontSize: 15, color: Colors.white),
               ),
-              Center(child: PowerPlaySection()),
-              SizedBox(
-                height: 42,
+              const Center(child: PowerPlaySection()),
+              const SizedBox(
+                height: 25,
               ),
               Text(
                 '*Batting power play over can be selected lated during scoring from the settings',
@@ -92,7 +96,7 @@ class _PowerPlayScreenState extends State<PowerPlayScreen> {
                   color: Colors.white,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
             ],
@@ -135,14 +139,14 @@ class PowerPlaySectionState extends State<PowerPlaySection> {
               }
             },
             child: Container(
-              margin: EdgeInsets.all(5),
+              margin: const EdgeInsets.all(5),
               width: 40,
               height: 40,
               decoration: BoxDecoration(
-                border: Border.all(width: 1,color: isSelected? Color(0xFFFEDA14):Colors.black),
+                border: Border.all(width: 1,color: isSelected? const Color(0xFFFEDA14):Colors.black),
                 
                 borderRadius: BorderRadius.circular(2),
-                color:Color(0xFF16171D),
+                color:const Color(0xFF16171D),
               ),
               child: Center(
                 child: Text(
