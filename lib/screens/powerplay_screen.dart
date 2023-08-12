@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:internship_assesment_appifylab/screens/performance_screen.dart';
 
-import '../main.dart';
 
 class PowerPlayScreen extends StatefulWidget {
   const PowerPlayScreen({super.key});
@@ -23,6 +22,7 @@ class _PowerPlayScreenState extends State<PowerPlayScreen> {
           Expanded(
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 16),
+              height: 48,
               child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>const PerformanceScreen()));
