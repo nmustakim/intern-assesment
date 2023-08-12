@@ -38,7 +38,6 @@ class PerformanceScreenState extends State<PerformanceScreen>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Stack(
-
               children: [
                 Container(
                   height: 200,
@@ -49,7 +48,6 @@ class PerformanceScreenState extends State<PerformanceScreen>
                     fit: BoxFit.cover,
                   ),
                 ),
-
                 Positioned(
                   top: 20,
                   left: 20,
@@ -59,12 +57,17 @@ class PerformanceScreenState extends State<PerformanceScreen>
                 ),
                 Positioned(
                   top: 20,
-                 left: 300,
-                  child:     OutlinedButton(onPressed: (){}, style:OutlinedButton.styleFrom(side: const BorderSide(color: Color(0xFFFEDA14))),child: Text('Follow',style: GoogleFonts.poppins(color: Colors.white),)),
-
-
+                  left: 300,
+                  child: OutlinedButton(
+                      onPressed: () {},
+                      style: OutlinedButton.styleFrom(
+                          side: const BorderSide(color: Color(0xFFFEDA14))),
+                      child: Text(
+                        'Follow',
+                        style: GoogleFonts.poppins(color: Colors.white),
+                      )),
                 ),
-                  Positioned(
+                Positioned(
                   top: 106,
                   left: 16,
                   child: Row(
@@ -123,7 +126,6 @@ class PerformanceScreenState extends State<PerformanceScreen>
                 )
               ],
             ),
-
             const SizedBox(height: 20),
             TabBar(
               indicatorColor: const Color(0xFFFEDA14),
@@ -136,9 +138,33 @@ class PerformanceScreenState extends State<PerformanceScreen>
               ],
             ),
             const SizedBox(height: 20),
-            Container(height: 43,color: const Color(0xFF1F212A),child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [Container(width:27,height:27,decoration:BoxDecoration(color:const Color(0xFF16171D),borderRadius: BorderRadius.circular(6)),child: Image.asset('assets/images/Union.png')),const SizedBox(width: 8),Container(width:27,height:27,decoration:BoxDecoration(color:const Color(0xFF16171D),borderRadius: BorderRadius.circular(6)),child: Image.asset('assets/images/Vector.png')),const SizedBox(width: 16,)],),),
+            Container(
+              height: 43,
+              color: const Color(0xFF1F212A),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Container(
+                      width: 27,
+                      height: 27,
+                      decoration: BoxDecoration(
+                          color: const Color(0xFF16171D),
+                          borderRadius: BorderRadius.circular(6)),
+                      child: Image.asset('assets/images/Union.png')),
+                  const SizedBox(width: 8),
+                  Container(
+                      width: 27,
+                      height: 27,
+                      decoration: BoxDecoration(
+                          color: const Color(0xFF16171D),
+                          borderRadius: BorderRadius.circular(6)),
+                      child: Image.asset('assets/images/Vector.png')),
+                  const SizedBox(
+                    width: 16,
+                  )
+                ],
+              ),
+            ),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 16),
               child: Table(
@@ -206,9 +232,8 @@ class PerformanceScreenState extends State<PerformanceScreen>
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: SizedBox(
-                height: 180,
+                height: 360,
                 child: GridView(
-                  physics: NeverScrollableScrollPhysics(),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       crossAxisSpacing: 16,
