@@ -122,6 +122,11 @@ class PowerPlaySectionState extends State<PowerPlaySection> {
       selectedNumbers.add(number);
     });
   }
+  void unselectNumber(int number){
+    setState(() {
+      selectedNumbers.remove(number);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -134,7 +139,10 @@ class PowerPlaySectionState extends State<PowerPlaySection> {
 
           return GestureDetector(
             onTap: () {
-              if (!isSelected && (selectedNumbers.isEmpty || number - 1 == selectedNumbers.last)) {
+              if (isSelected) {
+                unselectNumber(number);
+              } else if (selectedNumbers.isEmpty ||
+                  number - 1 == selectedNumbers.last) {
                 selectNumber(number);
               }
             },
