@@ -48,80 +48,90 @@ class PerformanceScreenState extends State<PerformanceScreen>
                     fit: BoxFit.cover,
                   ),
                 ),
-                Positioned(
-                  top: 20,
-                  left: 20,
-                  child: Image.asset(
-                    'assets/images/pro_pic.png',
-                  ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(top: 20,left: 16),
+                      child: Image.asset(
+                        'assets/images/pro_pic.png',
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 20,right: 16),
+                      height: 30,
+                      child: OutlinedButton(
+                          onPressed: () {},
+                          style: OutlinedButton.styleFrom(
+                              side: const BorderSide(color: Color(0xFFFEDA14))),
+                          child: Text(
+                            'Follow',
+                            style: GoogleFonts.poppins(color: Colors.white),
+                          )),
+                    ),
+                  ],
                 ),
-                Positioned(
-                  top: 20,
-                  left: 300,
-                  child: OutlinedButton(
-                      onPressed: () {},
-                      style: OutlinedButton.styleFrom(
-                          side: const BorderSide(color: Color(0xFFFEDA14))),
-                      child: Text(
-                        'Follow',
-                        style: GoogleFonts.poppins(color: Colors.white),
-                      )),
-                ),
+
                 Positioned(
                   top: 106,
                   left: 16,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Column(
-                        children: [
-                          Text(
-                            'Moeen Ali',
-                            style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white),
-                          ),
-                          Text(
-                            'England',
-                            style: GoogleFonts.poppins(color: Colors.white),
-                          )
-                        ],
-                      ),
-                      const SizedBox(
-                        width: 96,
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            'Right Hand',
-                            style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white),
-                          ),
-                          Text(
-                            'Batting',
-                            style: GoogleFonts.poppins(color: Colors.white),
-                          )
-                        ],
-                      ),
-                      const SizedBox(
-                        width: 24,
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            'Right Hand',
-                            style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white),
-                          ),
-                          Text(
-                            'Bowling',
-                            style: GoogleFonts.poppins(color: Colors.white),
-                          )
-                        ],
-                      )
-                    ],
+                  child: Container(
+
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          children: [
+                            Text(
+                              'Moeen Ali',
+                              style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.white),
+                            ),
+                            Text(
+                              'England',
+                              style: GoogleFonts.poppins(color: Colors.white),
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          width: 76,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              'Right Hand',
+                              style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.white),
+                            ),
+                            Text(
+                              'Batting',
+                              style: GoogleFonts.poppins(color: Colors.white),
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          width: 24,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              'Right Hand',
+                              style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.white),
+                            ),
+                            Text(
+                              'Bowling',
+                              style: GoogleFonts.poppins(color: Colors.white),
+                            )
+                          ],
+                        ),
+
+                      ],
+                    ),
                   ),
                 )
               ],
@@ -139,11 +149,15 @@ class PerformanceScreenState extends State<PerformanceScreen>
             ),
             const SizedBox(height: 20),
             Container(
+              padding: EdgeInsets.only(left: 16),
               height: 43,
               color: const Color(0xFF1F212A),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+
                 children: [
+                  Text('Current Form',style: GoogleFonts.poppins(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 18),)
+                  ,
+                  Expanded(child: const SizedBox()),
                   Container(
                       width: 27,
                       height: 27,

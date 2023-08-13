@@ -147,18 +147,15 @@ class PowerPlaySection extends StatelessWidget {
             20,
             (index) {
               int number = index + 1;
-              // bool isGloballySelected =
-              //     sc.globallySelectedNumbers.contains(number);
               bool isSelected = selectedNumbers.contains(number);
 
               return GestureDetector(
                 onTap: () {
-if(!isSelected){
-  sc.selectNumber(number, section);
-}
-else{
-  sc.unselectNumber(number, section);
-}
+                  if (!isSelected) {
+                    sc.selectNumber(number, section);
+                  } else {
+                    sc.unselectNumber(number, section);
+                  }
                 },
                 child: Container(
                   margin: const EdgeInsets.all(5),
