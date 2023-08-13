@@ -39,13 +39,20 @@ class PerformanceScreenState extends State<PerformanceScreen>
           children: [
             Stack(
               children: [
-                Container(
-                  height: 200,
+                SizedBox(
+                  height: 164,
                   width: double.infinity,
-                  color: Colors.blue,
-                  child: Image.asset(
-                    'assets/images/cover_pic.png',
-                    fit: BoxFit.cover,
+                  child: Stack(
+                    children: [
+                      Image.asset(
+                        'assets/images/cover.png',
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        'assets/images/cover_pic.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ],
                   ),
                 ),
                 Row(
@@ -181,60 +188,62 @@ class PerformanceScreenState extends State<PerformanceScreen>
             ),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 16),
-              child: Table(
-                border: TableBorder.all(color: Colors.transparent),
-                children: [
-                  TableRow(
-                    children: [
-                      buildTableCell('Sl.'),
-                      buildTableCell('Date'),
-                      buildTableCell('Innings'),
-                      buildTableCell('Score'),
-                      buildTableCell('Out'),
-                      buildTableCell('Ov'),
-                    ],
-                  ),
-                  TableRow(
-                    children: [
-                      buildTableCell('1'),
-                      buildTableCell('2023-08-12'),
-                      buildTableCell('Team A VS Team C '),
-                      buildTableCell('100'),
-                      buildTableCell('1'),
-                      buildTableCell('10.2'),
-                    ],
-                  ),
-                  TableRow(
-                    children: [
-                      buildTableCell('1'),
-                      buildTableCell('2023-08-12'),
-                      buildTableCell('Team A VS Team C '),
-                      buildTableCell('100'),
-                      buildTableCell('1'),
-                      buildTableCell('10.2'),
-                    ],
-                  ),
-                  TableRow(
-                    children: [
-                      buildTableCell('1'),
-                      buildTableCell('2023-08-12'),
-                      buildTableCell('Team A VS Team C '),
-                      buildTableCell('100'),
-                      buildTableCell('1'),
-                      buildTableCell('10.2'),
-                    ],
-                  ),
-                  TableRow(
-                    children: [
-                      buildTableCell('1'),
-                      buildTableCell('2023-08-12'),
-                      buildTableCell('Team A VS Team C '),
-                      buildTableCell('100'),
-                      buildTableCell('1'),
-                      buildTableCell('10.2'),
-                    ],
-                  ),
-                ],
+              child: Center(
+                child: Table(
+                  border: TableBorder.all(color: Colors.transparent),
+                  children: [
+                    TableRow(
+                      children: [
+                        buildTableCell('Sl.'),
+                        buildTableCell('Date'),
+                        buildTableCell('Innings'),
+                        buildTableCell('Score'),
+                        buildTableCell('Out'),
+                        buildTableCell('Ov'),
+                      ],
+                    ),
+                    TableRow(
+                      children: [
+                        buildTableCell('1'),
+                        buildTableCell('2023-08-12'),
+                        buildTableCell('Team A VS Team C '),
+                        buildTableCell('100'),
+                        buildTableCell('1'),
+                        buildTableCell('10.2'),
+                      ],
+                    ),
+                    TableRow(
+                      children: [
+                        buildTableCell('1'),
+                        buildTableCell('2023-08-12'),
+                        buildTableCell('Team A VS Team C '),
+                        buildTableCell('100'),
+                        buildTableCell('1'),
+                        buildTableCell('10.2'),
+                      ],
+                    ),
+                    TableRow(
+                      children: [
+                        buildTableCell('1'),
+                        buildTableCell('2023-08-12'),
+                        buildTableCell('Team A VS Team C '),
+                        buildTableCell('100'),
+                        buildTableCell('1'),
+                        buildTableCell('10.2'),
+                      ],
+                    ),
+                    TableRow(
+                      children: [
+                        buildTableCell('1'),
+                        buildTableCell('2023-08-12'),
+                        buildTableCell('Team A VS Team C '),
+                        buildTableCell('100'),
+                        buildTableCell('1'),
+                        buildTableCell('10.2'),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
             Center(
@@ -300,10 +309,14 @@ class PerformanceScreenState extends State<PerformanceScreen>
 
   Widget buildTableCell(String text) {
     return Container(
+      alignment: Alignment.center,
       padding: const EdgeInsets.all(8),
       child: Text(
         text,
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
         style: GoogleFonts.poppins(
+
             color: Colors.white, fontSize: 12, fontWeight: FontWeight.w400),
       ),
     );
