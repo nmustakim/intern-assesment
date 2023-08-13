@@ -78,7 +78,7 @@ class _PowerPlayScreenState extends State<PowerPlayScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 Center(
                     child: PowerPlaySection(
@@ -95,7 +95,7 @@ class _PowerPlayScreenState extends State<PowerPlayScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 Center(
                     child: PowerPlaySection(
@@ -112,7 +112,7 @@ class _PowerPlayScreenState extends State<PowerPlayScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 Center(
                     child: PowerPlaySection(
@@ -171,10 +171,11 @@ class PowerPlaySection extends StatelessWidget {
 
               return GestureDetector(
                 onTap: () {
-                  if (!isSelected) {
-                    sc.selectNumber(number, section);
-                  } else {
+                  if (isSelected) {
                     sc.unselectNumber(number, section);
+                  } else if(selectedNumbers.isEmpty ||
+                      number-1 == selectedNumbers.last) {
+                    sc.selectNumber(number, section);
                   }
                 },
                 child: Container(

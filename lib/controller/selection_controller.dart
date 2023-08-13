@@ -7,7 +7,7 @@ class SelectionController extends GetxController{
   final List<int> globallySelectedNumbers = <int>[].obs;
 
   void selectNumber(int number,section) {
-    if (!globallySelectedNumbers.contains(number)) {
+    if (!globallySelectedNumbers.contains(number) ) {
       globallySelectedNumbers.add(number);
       if(section == 1) {
         selectedNumbersPowerPlay1.add(number);
