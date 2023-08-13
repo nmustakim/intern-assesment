@@ -71,10 +71,11 @@ class _PowerPlayScreenState extends State<PowerPlayScreen> {
                   height: 30,
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 9),
+                  margin: const EdgeInsets.only(left: 9),
                   child: Text(
                     'Power Play 1',
-                    style: GoogleFonts.poppins(fontSize: 15, color: Colors.white),
+                    style:
+                        GoogleFonts.poppins(fontSize: 15, color: Colors.white),
                   ),
                 ),
                 const SizedBox(
@@ -88,10 +89,11 @@ class _PowerPlayScreenState extends State<PowerPlayScreen> {
                   height: 35,
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 9),
+                  margin: const EdgeInsets.only(left: 9),
                   child: Text(
                     'Power Play 2',
-                    style: GoogleFonts.poppins(fontSize: 15, color: Colors.white),
+                    style:
+                        GoogleFonts.poppins(fontSize: 15, color: Colors.white),
                   ),
                 ),
                 const SizedBox(
@@ -105,10 +107,11 @@ class _PowerPlayScreenState extends State<PowerPlayScreen> {
                   height: 35,
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 9),
+                  margin: const EdgeInsets.only(left: 9),
                   child: Text(
                     'Power Play 3',
-                    style: GoogleFonts.poppins(fontSize: 15, color: Colors.white),
+                    style:
+                        GoogleFonts.poppins(fontSize: 15, color: Colors.white),
                   ),
                 ),
                 const SizedBox(
@@ -161,9 +164,7 @@ class PowerPlaySection extends StatelessWidget {
   Widget build(BuildContext context) {
     final selectedNumbers = getSelectedNumbers();
     return Obx(() => Wrap(
- 
           children: List.generate(
-
             20,
             (index) {
               int number = index + 1;
@@ -173,14 +174,14 @@ class PowerPlaySection extends StatelessWidget {
                 onTap: () {
                   if (isSelected) {
                     sc.unselectNumber(number, section);
-                  } else if(selectedNumbers.isEmpty ||
-                      number-1 == selectedNumbers.last) {
+                  } else if (selectedNumbers.isEmpty ||
+                      number - 1 == selectedNumbers.last) {
                     sc.selectNumber(number, section);
                   }
                 },
                 child: Container(
-                  margin: EdgeInsets.all(4.5),
-                  width:40,
+                  margin: const EdgeInsets.all(4.5),
+                  width: 40,
                   height: 40,
                   decoration: BoxDecoration(
                     border: Border.all(

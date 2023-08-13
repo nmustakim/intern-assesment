@@ -60,13 +60,13 @@ class PerformanceScreenState extends State<PerformanceScreen>
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(top: 20,left: 16),
+                      margin: const EdgeInsets.only(top: 20,left: 16),
                       child: Image.asset(
                         'assets/images/pro_pic.png',
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 20,right: 16),
+                      margin: const EdgeInsets.only(top: 20,right: 16),
                       height: 30,
                       child: OutlinedButton(
                           onPressed: () {},
@@ -156,7 +156,7 @@ class PerformanceScreenState extends State<PerformanceScreen>
             ),
             const SizedBox(height: 20),
             Container(
-              padding: EdgeInsets.only(left: 16),
+              padding: const EdgeInsets.only(left: 16),
               height: 43,
               color: const Color(0xFF1F212A),
               child: Row(
@@ -164,7 +164,7 @@ class PerformanceScreenState extends State<PerformanceScreen>
                 children: [
                   Text('Current Form',style: GoogleFonts.poppins(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 18),)
                   ,
-                  Expanded(child: const SizedBox()),
+                  const Expanded(child: SizedBox()),
                   Container(
                       width: 27,
                       height: 27,
