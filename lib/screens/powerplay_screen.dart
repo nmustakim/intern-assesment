@@ -170,7 +170,7 @@ class PowerPlaySection extends StatelessWidget {
               int number = index + 1;
               bool isSelected = selectedNumbers.contains(number);
 
-              return GestureDetector(
+              return InkWell(
                 onTap: () {
                   if (isSelected) {
                     sc.unselectNumber(number, section);
