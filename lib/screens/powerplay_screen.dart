@@ -174,8 +174,8 @@ class PowerPlaySection extends StatelessWidget {
                 onTap: () {
                   if (isSelected) {
                     sc.unselectNumber(number, section);
-                  } else if (selectedNumbers.isEmpty ||
-                      number - 1 == selectedNumbers.last) {
+                  } else if (sc.globallySelectedNumbers.isEmpty ||
+                      number - 1 == sc.globallySelectedNumbers.last) {
                     sc.selectNumber(number, section);
                   }
                 },
