@@ -61,40 +61,58 @@ class _PowerPlayScreenState extends State<PowerPlayScreen> {
       ),
       backgroundColor: const Color(0xFF16171D),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Center(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(7.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(
                   height: 30,
                 ),
-                Text(
-                  'Power Play 1',
-                  style: GoogleFonts.poppins(fontSize: 15, color: Colors.white),
+                Container(
+                  margin: EdgeInsets.only(left: 9),
+                  child: Text(
+                    'Power Play 1',
+                    style: GoogleFonts.poppins(fontSize: 15, color: Colors.white),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
                 ),
                 Center(
                     child: PowerPlaySection(
                   section: 1,
                 )),
                 const SizedBox(
-                  height: 20,
+                  height: 35,
                 ),
-                Text(
-                  'Power Play 2',
-                  style: GoogleFonts.poppins(fontSize: 15, color: Colors.white),
+                Container(
+                  margin: EdgeInsets.only(left: 9),
+                  child: Text(
+                    'Power Play 2',
+                    style: GoogleFonts.poppins(fontSize: 15, color: Colors.white),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
                 ),
                 Center(
                     child: PowerPlaySection(
                   section: 2,
                 )),
                 const SizedBox(
-                  height: 20,
+                  height: 35,
                 ),
-                Text(
-                  'Power Play 3',
-                  style: GoogleFonts.poppins(fontSize: 15, color: Colors.white),
+                Container(
+                  margin: EdgeInsets.only(left: 9),
+                  child: Text(
+                    'Power Play 3',
+                    style: GoogleFonts.poppins(fontSize: 15, color: Colors.white),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
                 ),
                 Center(
                     child: PowerPlaySection(
@@ -143,7 +161,9 @@ class PowerPlaySection extends StatelessWidget {
   Widget build(BuildContext context) {
     final selectedNumbers = getSelectedNumbers();
     return Obx(() => Wrap(
+ 
           children: List.generate(
+
             20,
             (index) {
               int number = index + 1;
@@ -158,8 +178,8 @@ class PowerPlaySection extends StatelessWidget {
                   }
                 },
                 child: Container(
-                  margin: const EdgeInsets.all(5),
-                  width: 40,
+                  margin: EdgeInsets.all(4.5),
+                  width:40,
                   height: 40,
                   decoration: BoxDecoration(
                     border: Border.all(
